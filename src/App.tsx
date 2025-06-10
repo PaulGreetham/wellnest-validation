@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { supabase } from './lib/supabase'
 import type { UserSubmission, VendorSubmission } from './lib/supabase'
+import Swal from 'sweetalert2'
 import './App.scss'
 
 interface UserFormData {
@@ -20,7 +21,6 @@ interface VendorFormData {
 function App() {
   const [activeModal, setActiveModal] = useState<'user' | 'vendor' | null>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitMessage, setSubmitMessage] = useState<string | null>(null)
   const [userForm, setUserForm] = useState<UserFormData>({
     email: '',
     location: '',
@@ -37,7 +37,6 @@ function App() {
   const handleUserSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    setSubmitMessage(null)
 
     try {
       const submission: UserSubmission = {
@@ -52,21 +51,37 @@ function App() {
 
       if (error) {
         console.error('Error submitting user form:', error)
-        setSubmitMessage('Error submitting form. Please try again.')
+        await Swal.fire({
+          icon: 'error',
+          title: 'Oops!',
+          text: 'Something went wrong. Please try again.',
+          confirmButtonColor: '#16a34a'
+        })
       } else {
         console.log('User form submitted successfully:', submission)
-        setSubmitMessage('Thank you! Your submission has been recorded.')
-        // Reset form
+        
+        // Show success message with SweetAlert2
+        await Swal.fire({
+          icon: 'success',
+          title: 'Thank you!',
+          text: 'You will hear from us when we have exciting news!',
+          confirmButtonColor: '#16a34a',
+          timer: 3000,
+          timerProgressBar: true
+        })
+        
+        // Reset form and close modal
         setUserForm({ email: '', location: '', usage: 'not sure' })
-        // Close modal after a delay
-        setTimeout(() => {
-          setActiveModal(null)
-          setSubmitMessage(null)
-        }, 2000)
+        setActiveModal(null)
       }
     } catch (error) {
       console.error('Error submitting user form:', error)
-      setSubmitMessage('Error submitting form. Please try again.')
+      await Swal.fire({
+        icon: 'error',
+        title: 'Oops!',
+        text: 'Something went wrong. Please try again.',
+        confirmButtonColor: '#16a34a'
+      })
     } finally {
       setIsSubmitting(false)
     }
@@ -75,7 +90,6 @@ function App() {
   const handleVendorSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    setSubmitMessage(null)
 
     try {
       const submission: VendorSubmission = {
@@ -92,21 +106,37 @@ function App() {
 
       if (error) {
         console.error('Error submitting vendor form:', error)
-        setSubmitMessage('Error submitting form. Please try again.')
+        await Swal.fire({
+          icon: 'error',
+          title: 'Oops!',
+          text: 'Something went wrong. Please try again.',
+          confirmButtonColor: '#16a34a'
+        })
       } else {
         console.log('Vendor form submitted successfully:', submission)
-        setSubmitMessage('Thank you! Your submission has been recorded.')
-        // Reset form
+        
+        // Show success message with SweetAlert2
+        await Swal.fire({
+          icon: 'success',
+          title: 'Thank you!',
+          text: 'You will hear from us when we have exciting news!',
+          confirmButtonColor: '#16a34a',
+          timer: 3000,
+          timerProgressBar: true
+        })
+        
+        // Reset form and close modal
         setVendorForm({ businessName: '', email: '', location: '', usesSimilar: 'no', otherProviders: '' })
-        // Close modal after a delay
-        setTimeout(() => {
-          setActiveModal(null)
-          setSubmitMessage(null)
-        }, 2000)
+        setActiveModal(null)
       }
     } catch (error) {
       console.error('Error submitting vendor form:', error)
-      setSubmitMessage('Error submitting form. Please try again.')
+      await Swal.fire({
+        icon: 'error',
+        title: 'Oops!',
+        text: 'Something went wrong. Please try again.',
+        confirmButtonColor: '#16a34a'
+      })
     } finally {
       setIsSubmitting(false)
     }
@@ -114,7 +144,6 @@ function App() {
 
   const closeModal = () => {
     setActiveModal(null)
-    setSubmitMessage(null)
   }
   
   return (
@@ -181,12 +210,6 @@ function App() {
               <button className="close-btn" onClick={closeModal}>&times;</button>
             </div>
             <form onSubmit={handleUserSubmit} className="modal-form">
-              {submitMessage && (
-                <div className={`submit-message ${submitMessage.includes('Error') ? 'error' : 'success'}`}>
-                  {submitMessage}
-                </div>
-              )}
-              
               <div className="form-group">
                 <label htmlFor="user-email">Email Address</label>
                 <input
@@ -245,12 +268,6 @@ function App() {
               <button className="close-btn" onClick={closeModal}>&times;</button>
             </div>
             <form onSubmit={handleVendorSubmit} className="modal-form">
-              {submitMessage && (
-                <div className={`submit-message ${submitMessage.includes('Error') ? 'error' : 'success'}`}>
-                  {submitMessage}
-                </div>
-              )}
-              
               <div className="form-group">
                 <label htmlFor="business-name">Business Name</label>
                 <input
