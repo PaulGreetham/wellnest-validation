@@ -110,7 +110,7 @@ function App() {
     setActiveModal(null)
     setSubmitMessage(null)
   }
-
+  
   return (
     <div className="landing-page">
       <div className="logo-container">
