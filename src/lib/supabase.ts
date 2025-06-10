@@ -13,6 +13,7 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey)
 export interface UserSubmission {
   id?: number
   email: string
+  location: string
   usage_frequency: string
   created_at?: string
 }
@@ -21,6 +22,7 @@ export interface VendorSubmission {
   id?: number
   business_name: string
   email: string
+  location: string
   uses_similar: string
   other_providers?: string
   created_at?: string

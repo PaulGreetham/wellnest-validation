@@ -5,12 +5,14 @@ import './App.scss'
 
 interface UserFormData {
   email: string;
+  location: string;
   usage: string;
 }
 
 interface VendorFormData {
   businessName: string;
   email: string;
+  location: string;
   usesSimilar: string;
   otherProviders: string;
 }
@@ -21,11 +23,13 @@ function App() {
   const [submitMessage, setSubmitMessage] = useState<string | null>(null)
   const [userForm, setUserForm] = useState<UserFormData>({
     email: '',
+    location: '',
     usage: 'not sure'
   })
   const [vendorForm, setVendorForm] = useState<VendorFormData>({
     businessName: '',
     email: '',
+    location: '',
     usesSimilar: 'no',
     otherProviders: ''
   })
@@ -38,6 +42,7 @@ function App() {
     try {
       const submission: UserSubmission = {
         email: userForm.email,
+        location: userForm.location,
         usage_frequency: userForm.usage
       }
 
@@ -52,7 +57,7 @@ function App() {
         console.log('User form submitted successfully:', submission)
         setSubmitMessage('Thank you! Your submission has been recorded.')
         // Reset form
-        setUserForm({ email: '', usage: 'not sure' })
+        setUserForm({ email: '', location: '', usage: 'not sure' })
         // Close modal after a delay
         setTimeout(() => {
           setActiveModal(null)
@@ -76,6 +81,7 @@ function App() {
       const submission: VendorSubmission = {
         business_name: vendorForm.businessName,
         email: vendorForm.email,
+        location: vendorForm.location,
         uses_similar: vendorForm.usesSimilar,
         other_providers: vendorForm.usesSimilar === 'yes' ? vendorForm.otherProviders : undefined
       }
@@ -91,7 +97,7 @@ function App() {
         console.log('Vendor form submitted successfully:', submission)
         setSubmitMessage('Thank you! Your submission has been recorded.')
         // Reset form
-        setVendorForm({ businessName: '', email: '', usesSimilar: 'no', otherProviders: '' })
+        setVendorForm({ businessName: '', email: '', location: '', usesSimilar: 'no', otherProviders: '' })
         // Close modal after a delay
         setTimeout(() => {
           setActiveModal(null)
@@ -115,7 +121,8 @@ function App() {
     <div className="landing-page">
       <div className="content">
         <h1>Welcome to Wellnest</h1>
-        <p>Wellnest is your one-stop online marketplace for all things wellness—think of us as the Treatwell for the wellness industry. Sign up below to receive exclusive early-access when we launch.</p>
+        <p>Wellnest is your one-stop online marketplace for all things wellness—think of us as the Treatwell for the wellness industry. For users, get access to curated recommendations tailored to your wellness goals. For vendors, get access to a platform that will help you grow your business.</p>
+        <p>Sign up below to receive exclusive early-access when we launch.</p>
         
         <div className="industries-section">
           <h3>Mindful Categories</h3>
@@ -193,6 +200,18 @@ function App() {
               </div>
               
               <div className="form-group">
+                <label htmlFor="user-location">Location</label>
+                <input
+                  type="text"
+                  id="user-location"
+                  value={userForm.location}
+                  onChange={(e) => setUserForm({...userForm, location: e.target.value})}
+                  required
+                  disabled={isSubmitting}
+                />
+              </div>
+              
+              <div className="form-group">
                 <label>How many times per month would you use an app like this?</label>
                 <div className="pill-options">
                   {['not sure', '1-2 times', '3-5 times', '6+ times'].map((option) => (
@@ -251,6 +270,18 @@ function App() {
                   id="vendor-email"
                   value={vendorForm.email}
                   onChange={(e) => setVendorForm({...vendorForm, email: e.target.value})}
+                  required
+                  disabled={isSubmitting}
+                />
+              </div>
+              
+              <div className="form-group">
+                <label htmlFor="vendor-location">Location</label>
+                <input
+                  type="text"
+                  id="vendor-location"
+                  value={vendorForm.location}
+                  onChange={(e) => setVendorForm({...vendorForm, location: e.target.value})}
                   required
                   disabled={isSubmitting}
                 />
