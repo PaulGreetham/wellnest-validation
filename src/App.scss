@@ -17,7 +17,6 @@
   }
 
   .content {
-    max-width: 600px;
     text-align: left;
     padding: 2rem 2rem 2rem 4rem;
     background: white;
@@ -514,6 +513,13 @@
       }
     }
   }
+
+  .wellnest-marker {
+    font-size: 2.2rem;
+  }
+  .heading-light {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -590,8 +596,32 @@
       padding: 0.75rem;
     }
   }
+
+  .wellnest-marker {
+    font-size: 2.2rem;
+  }
+  .heading-light {
+    font-size: 1.5rem;
+  }
 }
 
 .industry-label {
   font-weight: 700 !important;
+}
+
+.wellnest-marker {
+  font-family: 'Permanent Marker', cursive;
+  color: #16a34a;
+  font-size: 3.5rem;
+  letter-spacing: 0.02em;
+  vertical-align: middle;
+}
+
+.heading-light {
+  font-family: 'Inter', 'Plus Jakarta Sans', Arial, sans-serif;
+  color: #8CA0A8;
+  font-weight: 300;
+  font-size: 2.5rem;
+  letter-spacing: 0.01em;
+  vertical-align: middle;
 } 

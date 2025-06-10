@@ -150,8 +150,11 @@ function App() {
   return (
     <div className="landing-page">
       <div className="content">
-        <h1>Welcome to Wellnest</h1>
-        <p>Wellnest is your one-stop online marketplace for all things wellness—think of us as the Treatwell for the wellness industry. For users, get access to curated recommendations tailored to your wellness goals. For vendors, get access to a platform that will help you grow your business.</p>
+        <h1>
+          <span className="heading-light">Welcome to</span> <span className="wellnest-marker">WellNest</span>
+        </h1>
+        <p>WellNest is your one-stop online marketplace for all things wellness—think of us as the Treatwell for the wellness industry.</p>
+        <p>For users, get access to curated recommendations tailored to your wellness goals. For vendors, get access to a platform that will help you grow your business.</p>
         <p>Sign up below to receive exclusive early-access when we launch.</p>
         
         <div className="industries-section">
@@ -175,7 +178,7 @@ function App() {
               <i className="industry-icon fi fi-rr-sparkles"></i>
               <div className="industry-text">
                 <span className="industry-label">Personal Care </span>
-                <span className="industry-details">(Hair, Nails, Massage + more)</span>
+                <span className="industry-details">(Care Products, Hair, Nails + more)</span>
               </div>
             </div>
             <div className="industry-item">
@@ -197,13 +200,6 @@ function App() {
               <div className="industry-text">
                 <span className="industry-label">Alternative Medicine </span>
                 <span className="industry-details">(Acupuncture, Chiropractic, Naturopathy + more)</span>
-              </div>
-            </div>
-            <div className="industry-item">
-              <i className="industry-icon fi fi-rr-smartphone"></i>
-              <div className="industry-text">
-                <span className="industry-label">Digital Wellness </span>
-                <span className="industry-details">(Apps, Wearables, Fitness + more)</span>
               </div>
             </div>
           </div>
