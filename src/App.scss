@@ -3,12 +3,12 @@
 .landing-page {
   min-height: 100vh;
   width: 100%;
-  background: #ffffff;
+  background: white;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 4rem;
-  padding: 2rem 4rem;
+  gap: 0;
+  padding: 0;
   
   // Remove the background overlays
   &:before,
@@ -19,11 +19,16 @@
   .content {
     max-width: 600px;
     text-align: left;
-    padding-right: 2rem;
+    padding: 2rem 2rem 2rem 4rem;
+    background: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     h1 {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 3.5rem;
+      font-size: 3rem;
       font-weight: 800;
       line-height: 1.1;
       margin-bottom: 1rem;
@@ -37,27 +42,26 @@
 
     h2 {
       font-family: 'Inter', sans-serif;
-      font-size: 1.25rem;
+      font-size: 1.5rem;
       font-weight: 500;
       color: #16a34a;
       margin-bottom: 1.5rem;
       letter-spacing: 0.025em;
-      text-transform: uppercase;
     }
 
     p {
       font-family: 'Inter', sans-serif;
-      font-size: 1.125rem;
+      font-size: 1rem;
       font-weight: 400;
-      line-height: 1.7;
-      color: #64748b;
-      margin-bottom: 2rem;
+      line-height: 1.5;
+      color: #374151;
+      margin-bottom: 1rem;
       max-width: 500px;
     }
   }
 
   .industries-section {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
 
     h3 {
       font-family: 'Plus Jakarta Sans', sans-serif;
@@ -70,29 +74,30 @@
 
     .industries-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr;
       gap: 0.25rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.25rem;
 
       .industry-item {
         display: flex;
         align-items: center;
         gap: 0.5rem;
-        padding: 0.25rem 0;
+        padding: 0.2rem 0;
         font-family: 'Inter', sans-serif;
-        font-size: 0.75rem;
+        font-size: 0.85rem;
         font-weight: 500;
         color: #374151;
+        white-space: nowrap;
 
         .industry-icon {
-          font-size: 1rem;
-          width: 16px;
-          height: 16px;
+          font-size: 1.125rem;
+          width: 20px;
+          height: 20px;
           display: flex;
           align-items: center;
           justify-content: center;
           color: #16a34a;
-          font-weight: 600;
+          flex-shrink: 0;
         }
       }
     }
@@ -102,6 +107,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #F8DDD9;
+    min-height: 100vh;
+    padding: 2rem;
     
     img {
       width: 100%;
@@ -327,13 +335,12 @@
 @media (max-width: 1024px) {
   .landing-page {
     grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 2rem;
-    text-align: center;
+    gap: 0;
 
     .content {
-      padding-right: 0;
-      max-width: 100%;
+      padding: 2rem;
+      min-height: auto;
+      text-align: center;
       
       h1 {
         font-size: 3rem;
@@ -351,7 +358,7 @@
 
     .industries-section {
       .industries-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 0.25rem;
 
         .industry-item {
@@ -363,6 +370,7 @@
 
     .hero-image {
       order: -1;
+      min-height: 50vh;
       
       img {
         max-width: 400px;
@@ -381,9 +389,9 @@
 
 @media (max-width: 768px) {
   .landing-page {
-    padding: 1.5rem;
-
     .content {
+      padding: 1.5rem;
+
       h1 {
         font-size: 2.5rem;
       }
@@ -410,8 +418,13 @@
       }
     }
 
-    .hero-image img {
-      max-width: 300px;
+    .hero-image {
+      min-height: 40vh;
+      padding: 1.5rem;
+      
+      img {
+        max-width: 300px;
+      }
     }
 
     .button-container {

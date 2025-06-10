@@ -115,75 +115,54 @@ function App() {
     <div className="landing-page">
       <div className="content">
         <h1>Welcome to Wellnest</h1>
-        <h2>Validation Platform</h2>
-        <p>Choose your path to get started with our platform. Whether you're a user looking to access our services or a vendor wanting to partner with us, we've got you covered.</p>
+        <p>Wellnest is your one-stop online marketplace for all things wellness—think of us as the Treatwell for the wellness industry. Sign up below to receive exclusive early-access when we launch.</p>
         
         <div className="industries-section">
-          <h3>Industries We Cover</h3>
+          <h3>Mindful Categories</h3>
           <div className="industries-grid">
             <div className="industry-item">
-              <span className="industry-icon">▲</span>
-              <span>Yoga/Gyms</span>
+              <i className="industry-icon fi fi-rr-massage"></i>
+              <span>Classes (Yoga, Meditation, Fitness + more)</span>
             </div>
             <div className="industry-item">
-              <span className="industry-icon">○</span>
-              <span>Meditation/Classes</span>
+              <i className="industry-icon fi fi-rr-heart"></i>
+              <span>Therapy Services (Psychologists, Counsellors, Coaches + more)</span>
             </div>
             <div className="industry-item">
-              <span className="industry-icon">♡</span>
-              <span>Therapy Services</span>
+              <i className="industry-icon fi fi-rr-sparkles"></i>
+              <span>Personal Care (Hair, Nails, Massage + more)</span>
             </div>
             <div className="industry-item">
-              <span className="industry-icon">✦</span>
-              <span>Personal Care</span>
+              <i className="industry-icon fi fi-rr-leaf"></i>
+              <span>Mindful Food & Drink (Health, Vegan, Gluten-Free + more)</span>
             </div>
             <div className="industry-item">
-              <span className="industry-icon">🍃</span>
-              <span>Mindful Food & Drink</span>
+              <i className="industry-icon fi fi-rr-mountain"></i>
+              <span>Wellness Tourism (Spa, Retreats, Wellness Holidays + more)</span>
             </div>
             <div className="industry-item">
-              <span className="industry-icon">⛰</span>
-              <span>Wellness Tourism</span>
+              <i className="industry-icon fi fi-rr-stethoscope"></i>
+              <span>Alternative Medicine (Acupuncture, Chiropractic, Naturopathy + more)</span>
             </div>
             <div className="industry-item">
-              <span className="industry-icon">◆</span>
-              <span>Workshops</span>
-            </div>
-            <div className="industry-item">
-              <span className="industry-icon">✚</span>
-              <span>Alternative Medicine</span>
-            </div>
-            <div className="industry-item">
-              <span className="industry-icon">◇</span>
-              <span>Spas & Treatments</span>
-            </div>
-            <div className="industry-item">
-              <span className="industry-icon">◈</span>
-              <span>Digital Wellness</span>
-            </div>
-            <div className="industry-item">
-              <span className="industry-icon">☾</span>
-              <span>Sleep</span>
-            </div>
-            <div className="industry-item">
-              <span className="industry-icon">♪</span>
-              <span>Music</span>
+              <i className="industry-icon fi fi-rr-smartphone"></i>
+              <span>Digital Wellness (Apps, Wearables, Fitness + more)</span>
             </div>
           </div>
         </div>
         
         <div className="button-container">
           <button className="btn btn-user" onClick={() => setActiveModal('user')}>
-            User
+            User Sign Up
           </button>
           <button className="btn btn-vendor" onClick={() => setActiveModal('vendor')}>
-            Vendor
+            Vendor Sign Up
           </button>
         </div>
       </div>
 
       <div className="hero-image">
-        <img src="/5143841.jpg" alt="Wellnest Platform" />
+        <img src="/9116229.jpg" alt="Wellnest Platform" />
       </div>
 
       {/* User Modal */}
