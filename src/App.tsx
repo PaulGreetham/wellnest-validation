@@ -151,9 +151,9 @@ function App() {
     <div className="landing-page">
       <div className="content">
         <h1>
-          <span className="heading-light">Welcome to</span> <span className="wellnest-marker">WellNest</span>
+          <span className="heading-light">Welcome to</span> <span className="wellnest-marker">WellNestra</span>
         </h1>
-        <p>WellNest is your one-stop online marketplace for all things wellness—think of us as the Treatwell for the wellness industry.</p>
+        <p>WellNestra is your one-stop online marketplace for all things wellness—think of us as the Treatwell for the wellness industry.</p>
         <p>For users, get access to curated recommendations tailored to your wellness goals. For vendors, get access to a platform that will help you grow your business.</p>
         <p>Sign up below to receive exclusive early-access when we launch.</p>
         
