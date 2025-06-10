@@ -3,6 +3,8 @@
 .landing-page {
   min-height: 100vh;
   width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
   background: white;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -85,7 +87,8 @@
         font-family: 'Inter', sans-serif;
         font-size: 0.85rem;
         color: #374151;
-        white-space: nowrap;
+        white-space: normal !important;
+        word-break: break-word;
 
         .industry-icon {
           font-size: 1.125rem;
