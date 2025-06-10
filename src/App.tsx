@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { supabase } from './lib/supabase'
 import type { UserSubmission, VendorSubmission } from './lib/supabase'
 import Swal from 'sweetalert2'
+import { Analytics } from '@vercel/analytics/react'
 import './App.scss'
 
 interface UserFormData {
@@ -342,6 +343,8 @@ function App() {
           </div>
         </div>
       )}
+      
+      <Analytics />
     </div>
   )
 }
