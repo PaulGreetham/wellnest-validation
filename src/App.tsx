@@ -113,15 +113,64 @@ function App() {
   
   return (
     <div className="landing-page">
-      <div className="logo-container">
-        {/* Logo space - you can add your logo here */}
-        <div className="logo-placeholder">LOGO</div>
-      </div>
-      
       <div className="content">
         <h1>Welcome to Wellnest</h1>
         <h2>Validation Platform</h2>
         <p>Choose your path to get started with our platform. Whether you're a user looking to access our services or a vendor wanting to partner with us, we've got you covered.</p>
+        
+        <div className="industries-section">
+          <h3>Industries We Cover</h3>
+          <div className="industries-grid">
+            <div className="industry-item">
+              <span className="industry-icon">▲</span>
+              <span>Yoga/Gyms</span>
+            </div>
+            <div className="industry-item">
+              <span className="industry-icon">○</span>
+              <span>Meditation/Classes</span>
+            </div>
+            <div className="industry-item">
+              <span className="industry-icon">♡</span>
+              <span>Therapy Services</span>
+            </div>
+            <div className="industry-item">
+              <span className="industry-icon">✦</span>
+              <span>Personal Care</span>
+            </div>
+            <div className="industry-item">
+              <span className="industry-icon">🍃</span>
+              <span>Mindful Food & Drink</span>
+            </div>
+            <div className="industry-item">
+              <span className="industry-icon">⛰</span>
+              <span>Wellness Tourism</span>
+            </div>
+            <div className="industry-item">
+              <span className="industry-icon">◆</span>
+              <span>Workshops</span>
+            </div>
+            <div className="industry-item">
+              <span className="industry-icon">✚</span>
+              <span>Alternative Medicine</span>
+            </div>
+            <div className="industry-item">
+              <span className="industry-icon">◇</span>
+              <span>Spas & Treatments</span>
+            </div>
+            <div className="industry-item">
+              <span className="industry-icon">◈</span>
+              <span>Digital Wellness</span>
+            </div>
+            <div className="industry-item">
+              <span className="industry-icon">☾</span>
+              <span>Sleep</span>
+            </div>
+            <div className="industry-item">
+              <span className="industry-icon">♪</span>
+              <span>Music</span>
+            </div>
+          </div>
+        </div>
         
         <div className="button-container">
           <button className="btn btn-user" onClick={() => setActiveModal('user')}>
@@ -131,6 +180,10 @@ function App() {
             Vendor
           </button>
         </div>
+      </div>
+
+      <div className="hero-image">
+        <img src="/5143841.jpg" alt="Wellnest Platform" />
       </div>
 
       {/* User Modal */}
