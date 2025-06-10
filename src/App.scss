@@ -379,8 +379,10 @@
 @media (max-width: 768px) {
   .landing-page {
     .content {
-      padding: 1rem;
+      padding: 2rem;
       text-align: center;
+      margin-bottom: 2rem;
+      min-height: 100dvh;
 
       h1 {
         font-size: 2rem;
@@ -459,10 +461,10 @@
     }
 
     .button-container {
-      flex-direction: column;
       gap: 0.5rem;
       justify-content: center;
       align-items: center;
+      width: 100%;
 
       .btn {
         width: 100%;
@@ -527,6 +529,7 @@
     .content {
       padding: 2rem;
       margin-bottom: 2rem;
+      min-height: 100dvh;
 
       h1 {
         font-size: 1.75rem;
@@ -574,7 +577,7 @@
 
     .button-container {
       .btn {
-        max-width: 220px;
+        width: 100%;
         padding: 0.75rem 1.25rem;
         font-size: 0.85rem;
       }
