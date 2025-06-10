@@ -158,32 +158,53 @@ function App() {
           <h3>Mindful Categories</h3>
           <div className="industries-grid">
             <div className="industry-item">
-              <i className="industry-icon fi fi-rr-massage"></i>
-              <span>Classes (Yoga, Meditation, Fitness + more)</span>
+              <i className="industry-icon fi fi-rr-flower"></i>
+              <div className="industry-text">
+                <span className="industry-label">Classes </span>
+                <span className="industry-details">(Yoga, Meditation, Fitness + more)</span>
+              </div>
             </div>
             <div className="industry-item">
               <i className="industry-icon fi fi-rr-heart"></i>
-              <span>Therapy Services (Psychologists, Counsellors, Coaches + more)</span>
+              <div className="industry-text">
+                <span className="industry-label">Therapy Services </span>
+                <span className="industry-details">(Psychologists, Counsellors, Coaches + more)</span>
+              </div>
             </div>
             <div className="industry-item">
               <i className="industry-icon fi fi-rr-sparkles"></i>
-              <span>Personal Care (Hair, Nails, Massage + more)</span>
+              <div className="industry-text">
+                <span className="industry-label">Personal Care </span>
+                <span className="industry-details">(Hair, Nails, Massage + more)</span>
+              </div>
             </div>
             <div className="industry-item">
               <i className="industry-icon fi fi-rr-leaf"></i>
-              <span>Mindful Food & Drink (Health, Vegan, Gluten-Free + more)</span>
+              <div className="industry-text">
+                <span className="industry-label">Mindful Food & Drink </span>
+                <span className="industry-details">(Health, Vegan, Gluten-Free + more)</span>
+              </div>
             </div>
             <div className="industry-item">
               <i className="industry-icon fi fi-rr-mountain"></i>
-              <span>Wellness Tourism (Spa, Retreats, Wellness Holidays + more)</span>
+              <div className="industry-text">
+                <span className="industry-label">Wellness Tourism </span>
+                <span className="industry-details">(Spa, Retreats, Wellness Holidays + more)</span>
+              </div>
             </div>
             <div className="industry-item">
               <i className="industry-icon fi fi-rr-stethoscope"></i>
-              <span>Alternative Medicine (Acupuncture, Chiropractic, Naturopathy + more)</span>
+              <div className="industry-text">
+                <span className="industry-label">Alternative Medicine </span>
+                <span className="industry-details">(Acupuncture, Chiropractic, Naturopathy + more)</span>
+              </div>
             </div>
             <div className="industry-item">
               <i className="industry-icon fi fi-rr-smartphone"></i>
-              <span>Digital Wellness (Apps, Wearables, Fitness + more)</span>
+              <div className="industry-text">
+                <span className="industry-label">Digital Wellness </span>
+                <span className="industry-details">(Apps, Wearables, Fitness + more)</span>
+              </div>
             </div>
           </div>
         </div>

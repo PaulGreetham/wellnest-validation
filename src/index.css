@@ -12,7 +12,7 @@
 
 html {
   scroll-behavior: smooth;
-  background: #FEE3E4;
+  background: white;
 }
 
 body {
@@ -20,14 +20,14 @@ body {
   padding: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: #FEE3E4;
+  background: white;
   overflow-x: hidden;
 }
 
 #root {
   min-height: 100vh;
   width: 100%;
-  background: #FEE3E4;
+  background: white;
 }
 
 * {
